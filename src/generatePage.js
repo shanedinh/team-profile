@@ -6,17 +6,17 @@ const Intern = require('../lib/Intern');
 
 const generateManager = function (manager) {
     return `
-    <div class="card border border-black rounded shadow-xl h-100 w-50px">
+    <div class="p-2 card border border-black rounded shadow-xl h-100 w-50px">
         <div class="card border bg-blue-700 border-black">
             <div class="card-header text-white">
-            <h2 class="font-bold text-4xl p-3">${manager.name}</h2>
-            <h4 class="italic text-2xl p-3">Manager</h4>
+            <h2 class="font-bold text-4xl pl-3 pt-1">${manager.name}</h2>
+            <h4 class="italic text-2xl pl-3">Manager</h4>
             </div>
         </div>
         <div class="card-body">
-        <p class="pl-2">ID #: ${manager.id}</p></br>
-        <p class="pl-2">Email: ${manager.email}</p></br>
-        <p class="pl-2">Office #: ${manager.officeNumber}</p></br>
+        <p class="p-1">ID #: ${manager.id}</p>
+        <p class="p-1">Email: ${manager.email}</p>
+        <p class="p-1">Office #: ${manager.officeNumber}</p>
         </div>
     </div>
     `;
@@ -24,17 +24,17 @@ const generateManager = function (manager) {
 
 const generateEngineer = function (engineer) {
   return `
-    <div class="card border border-black rounded shadow-xl h-100 w-50px">
+    <div class="p-2 card border border-black rounded shadow-xl h-100 w-50px">
         <div class="card border bg-blue-700 border-black">
             <div class="card-header text-white">
-            <h2 class="font-bold text-4xl p-3">${engineer.name}</h2>
-            <h4 class="italic text-2xl p-3">Engineer</h4>
+            <h2 class="font-bold text-4xl pl-3 pt-1">${engineer.name}</h2>
+            <h4 class="italic text-2xl pl-3">Engineer</h4>
             </div>
         </div>
         <div class="card-body">
-        <p class="pl-2">ID #: ${engineer.id}</p></br>
-        <p class="pl-2">Email: ${engineer.email}</p></br>
-        <p class="pl-2">GitHub: ${engineer.github}</p></br>
+        <p class="p-1">ID #: ${engineer.id}</p>
+        <p class="p-1">Email: ${engineer.email}</p>
+        <p class="p-1">GitHub: ${engineer.github}</p>
         </div>
     </div>
     `;
@@ -42,16 +42,16 @@ const generateEngineer = function (engineer) {
 
 const generateEmployee = function (employee) {
   return `
-    <div class="card border border-black rounded shadow-xl h-100 w-50px">
+    <div class="p-2 card border border-black rounded shadow-xl h-100 w-50px">
         <div class="card border bg-blue-700 border-black">
             <div class="card-header text-white">
-            <h2 class="font-bold text-4xl p-3">${employee.name}</h2>
-            <h4 class="italic text-2xl p-3">Employee</h4>
+            <h2 class="font-bold text-4xl pl-3 pt-1">${employee.name}</h2>
+            <h4 class="italic text-2xl pl-3">Employee</h4>
             </div>
         </div>
         <div class="card-body">
-        <p class="pl-2">ID #: ${employee.id}</p></br>
-        <p class="pl-2">Email: ${employee.email}</p></br>
+        <p class="p-1">ID #: ${employee.id}</p>
+        <p class="p-1">Email: ${employee.email}</p>
         </div>
     </div>
     `;
@@ -59,17 +59,17 @@ const generateEmployee = function (employee) {
 
 const generateIntern = function (intern) {
   return `
-    <div class="card border border-black rounded shadow-xl h-100 w-50px">
+    <div class="p-2 card border border-black rounded shadow-xl h-100 w-50px">
         <div class="card border bg-blue-700 border-black">
             <div class="card-header text-white">
-            <h2 class="font-bold text-4xl p-3">${intern.name}</h2>
-            <h4 class="italic text-2xl p-3">Intern</h4>
+            <h2 class="font-bold text-4xl pl-3 pt-1">${intern.name}</h2>
+            <h4 class="italic text-2xl pl-3">Intern</h4>
             </div>
         </div>
         <div class="card-body">
-        <p class="pl-2">ID #: ${intern.id}</p></br>
-        <p class="pl-2">Email: ${intern.email}</p></br>
-        <p class="pl-2">School: ${intern.school}</p></br>
+        <p class="p-1">ID #: ${intern.id}</p>
+        <p class="p-1">Email: ${intern.email}</p>
+        <p class="p-1">School: ${intern.school}</p>
         </div>
     </div>
     `;
@@ -132,7 +132,7 @@ const generatePage =  function (employeeCards) {
             </header>
         </body>
         </div>
-        <main class="gap-5 columns-4">
+        <main class="columns-4">
             <div class="container">
             <div class="row">
                     ${employeeCards}

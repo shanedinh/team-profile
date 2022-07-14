@@ -9,14 +9,6 @@ const teamList = [];
 
 const buildTeam = async () => {
     const answers = await inquirer.prompt([
-    //   {
-    //     type: "list",
-    //     name: "begin",
-    //     message:
-    //       "Press enter to begin building the team. You will be prompted to enter information about an employee.",
-    //     choices: ["Begin building team."],
-    //     when: ({ addRole }) => addRole,
-    //   },
       {
         type: "input",
         name: "name",
@@ -140,19 +132,6 @@ async function promptQuestions() {
         return writeFile();
     }
 };
-
-promptQuestions()
-//     .then(buildTeam)
-//     .then((answers) => {
-//         const pageHTML = generatePage(answers);
-
-//         fs.writeFile('./index.html'), pageHTML, (err) => {
-//             if (err) throw new Error(err);
-
-//             console.log("Team built!")
-//         }
-//     })
-
 
 function writeFile() {
     fs.writeFileSync('./dist/index.html', generatePage(teamList), console.log("Team built!"),

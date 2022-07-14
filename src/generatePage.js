@@ -6,10 +6,11 @@ const Intern = require('../lib/Intern');
 
 const generateManager = function (manager) {
     return `
-    <div class="columns-4">
-        <div class="card">
-            <div class="card-header text-black">
-            <h2>${manager.name}</h2>
+    <div class="card border border-black rounded shadow-xl">
+        <div class="card border bg-blue-700 border-black">
+            <div class="card-header text-white">
+            <h2 class="font-bold text-4xl">${manager.name}</h2>
+            <h4 class="italic text-2xl">Manager</h4>
             </div>
         </div>
         <div class="card-body">
@@ -23,7 +24,7 @@ const generateManager = function (manager) {
 
 const generateEngineer = function (engineer) {
   return `
-    <div class="columns-4">
+    <div>
         <div class="card">
             <div class="card-header text-black">
             <h2>${engineer.name}</h2>
@@ -40,7 +41,7 @@ const generateEngineer = function (engineer) {
 
 const generateEmployee = function (employee) {
   return `
-    <div class="columns-4">
+    <div>
         <div class="card">
             <div class="card-header text-black">
             <h2>${employee.name}</h2>
@@ -56,7 +57,7 @@ const generateEmployee = function (employee) {
 
 const generateIntern = function (intern) {
   return `
-    <div class="columns-4">
+    <div>
         <div class="card">
             <div class="card-header text-black">
             <h2>${intern.name}</h2>
@@ -130,7 +131,6 @@ const generatePage =  function (employeeCards) {
         </div>
         <main>
             <div class="container">
-                <div class="row justify-content-center">
                     ${employeeCards}
             </div>
         </main>

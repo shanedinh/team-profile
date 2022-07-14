@@ -6,34 +6,35 @@ const Intern = require('../lib/Intern');
 
 const generateManager = function (manager) {
     return `
-    <div class="card border border-black rounded shadow-xl">
+    <div class="card border border-black rounded shadow-xl h-100 w-50px">
         <div class="card border bg-blue-700 border-black">
             <div class="card-header text-white">
-            <h2 class="font-bold text-4xl">${manager.name}</h2>
-            <h4 class="italic text-2xl">Manager</h4>
+            <h2 class="font-bold text-4xl p-3">${manager.name}</h2>
+            <h4 class="italic text-2xl p-3">Manager</h4>
             </div>
         </div>
         <div class="card-body">
-        <p>ID #: ${manager.id}</p></br>
-        <p>Email: ${manager.email}</p></br>
-        <p>Office #: ${manager.officeNumber}</p></br>
+        <p class="pl-2">ID #: ${manager.id}</p></br>
+        <p class="pl-2">Email: ${manager.email}</p></br>
+        <p class="pl-2">Office #: ${manager.officeNumber}</p></br>
         </div>
     </div>
-    `
+    `;
 }
 
 const generateEngineer = function (engineer) {
   return `
-    <div>
-        <div class="card">
-            <div class="card-header text-black">
-            <h2>${engineer.name}</h2>
+    <div class="card border border-black rounded shadow-xl h-100 w-50px">
+        <div class="card border bg-blue-700 border-black">
+            <div class="card-header text-white">
+            <h2 class="font-bold text-4xl p-3">${engineer.name}</h2>
+            <h4 class="italic text-2xl p-3">Engineer</h4>
             </div>
         </div>
         <div class="card-body">
-        <p>ID #: ${engineer.id}</p></br>
-        <p>Email: ${engineer.email}</p></br>
-        <p>GitHub: ${engineer.github}</p></br>
+        <p class="pl-2">ID #: ${engineer.id}</p></br>
+        <p class="pl-2">Email: ${engineer.email}</p></br>
+        <p class="pl-2">GitHub: ${engineer.github}</p></br>
         </div>
     </div>
     `;
@@ -41,15 +42,16 @@ const generateEngineer = function (engineer) {
 
 const generateEmployee = function (employee) {
   return `
-    <div>
-        <div class="card">
-            <div class="card-header text-black">
-            <h2>${employee.name}</h2>
+    <div class="card border border-black rounded shadow-xl h-100 w-50px">
+        <div class="card border bg-blue-700 border-black">
+            <div class="card-header text-white">
+            <h2 class="font-bold text-4xl p-3">${employee.name}</h2>
+            <h4 class="italic text-2xl p-3">Employee</h4>
             </div>
         </div>
         <div class="card-body">
-        <p>ID #: ${employee.id}</p></br>
-        <p>Email: ${employee.email}</p></br>
+        <p class="pl-2">ID #: ${employee.id}</p></br>
+        <p class="pl-2">Email: ${employee.email}</p></br>
         </div>
     </div>
     `;
@@ -57,16 +59,17 @@ const generateEmployee = function (employee) {
 
 const generateIntern = function (intern) {
   return `
-    <div>
-        <div class="card">
-            <div class="card-header text-black">
-            <h2>${intern.name}</h2>
+    <div class="card border border-black rounded shadow-xl h-100 w-50px">
+        <div class="card border bg-blue-700 border-black">
+            <div class="card-header text-white">
+            <h2 class="font-bold text-4xl p-3">${intern.name}</h2>
+            <h4 class="italic text-2xl p-3">Intern</h4>
             </div>
         </div>
         <div class="card-body">
-        <p>ID #: ${intern.id}</p></br>
-        <p>Email: ${intern.email}</p></br>
-        <p>School: ${intern.school}</p></br>
+        <p class="pl-2">ID #: ${intern.id}</p></br>
+        <p class="pl-2">Email: ${intern.email}</p></br>
+        <p class="pl-2">School: ${intern.school}</p></br>
         </div>
     </div>
     `;
@@ -129,9 +132,11 @@ const generatePage =  function (employeeCards) {
             </header>
         </body>
         </div>
-        <main>
+        <main class="gap-5 columns-4">
             <div class="container">
+            <div class="row">
                     ${employeeCards}
+            </div>
             </div>
         </main>
     </html>

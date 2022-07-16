@@ -7,6 +7,8 @@ const Employee = require("./lib/Employee");
 const generatePage = require('./src/generatePage.js');
 const teamList = [];
 
+
+// Prompts for questions 
 const buildTeam = async () => {
     const answers = await inquirer.prompt([
       {
@@ -51,10 +53,11 @@ const buildTeam = async () => {
         type: "list",
         name: "employeeRole",
         message: "Please verify employee's role:",
-        choices: ["Manager", "Engineer", "Employee", "Intern"],
+        choices: ["Manager", "Engineer", "Intern"],
       },
     ]);
 
+    // additional prompts for specialized questions depending on employee type
   if(answers.employeeRole === 'Manager') {
       const optManager = await inquirer.prompt([
           {
@@ -115,6 +118,9 @@ const buildTeam = async () => {
   }
 };
 
+promptQuestions()
+
+// ask to add a new employee - add or end and build team profile
 async function promptQuestions() {
     await buildTeam();
 

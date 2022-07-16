@@ -16,3 +16,4 @@ If you do not - use "npm install inquirer@8.2.4" to install.
 - html page will be loacted in /dist folder, open html file in browser to view your generated team profile
 
 ## Video
+[Watch example video here!](https://drive.google.com/file/d/1pi2N61JJ0ttchmmsGmq_cge9KWq9QhQ3/view)
